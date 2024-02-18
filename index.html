@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bus Ticket</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Ticket</title>
 
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
-<style>
+  <style>
     .raleway {
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-</style>
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+  </style>
 
-    <!-- Adding DaisyUi -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+  <!-- Adding DaisyUi -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- Customized Color -->
-<script>
+  <!-- Customized Color -->
+  <script>
     tailwind.config = {
       theme: {
         extend: {
@@ -34,99 +36,167 @@
             'ticket-small-color': '#424247',
             'coupon15-color': '#FFBF0F',
             'coupon20-color': '#F78C9C',
-            
+
           }
         }
       }
     }
   </script>
 </head>
+
 <body class="raleway">
-    <header>
-        <div class="navbar px-10 bg-base-100">
-            <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                  <li><a>Home</a></li>
-                  <li><a>About</a></li>
-                  <li><a>Destination</a></li>
-                  <li><a>Search</a></li>
-                </ul>
-              </div>
-              <a class="btn btn-ghost text-xl font-bold">P-Ticket</a>
-            </div>
-            <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1">
-                <li><a>Home</a></li>
-                <li><a>About</a></li>
-                <li><a>Destination</a></li>
-                <li><a>Search</a></li>
-              </ul>
-            </div>
-            <div class="navbar-end">
-              <a class="btn bg-ticket-primary bg-opacity-20">Bus <img src="/images/bus-icon.png" alt=""></a>
-            </div>
+  <header>
+    <div class="navbar px-10 bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
           </div>
-          <!-- Navbar Complete -->
-    </header>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
+          </ul>
+        </div>
+        <a class="btn btn-ghost text-xl font-bold">P-Ticket</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a>Home</a></li>
+          <li><a>About</a></li>
+          <li><a>Destination</a></li>
+          <li><a>Search</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <a class="btn bg-ticket-primary bg-opacity-20">Bus <img src="/images/bus-icon.png" alt=""></a>
+      </div>
+    </div>
+    <!-- Navbar Complete -->
+  </header>
 
-    <main class="container mx-auto">
-        <!-- Main banner -->
-<div class="bg-cover bg-center h-auto lg:h-[500px] text-white py-24  object-fill mx-10 rounded-lg  justify-center " style="background-image: url(/images/banner.png);">
-    
-     <p class="text-3xl font-bold text-center">End-to-End Travel with </p>
-     <p class="text-3xl font-bold text-center text-ticket-primary">P Paribahan </p>
-     <p class="text-xl mb-10 leading-none text-center lg:w-[600px] m-auto">P Paribahan: Your ultimate travel companion. Experience seamless bus booking and travel services from start to finish. Book now for a hassle-free journey!</p>
-     <a href="#" class="bg-ticket-primary py-4 px-8 text-black font-bold text-xs rounded-md hover:bg-gray-200 mx-auto block w-[150px] text-center">Buy Tickets</a>
-      
- </div>
+  <main class="container mx-auto">
+    <!-- Main banner -->
+    <div class="bg-cover bg-center h-auto lg:h-[500px] text-white py-24  object-fill mx-10 rounded-lg  justify-center "
+      style="background-image: url(/images/banner.png);">
 
- <!-- Coupon Code -->
+      <p class="text-3xl font-bold text-center">End-to-End Travel with </p>
+      <p class="text-3xl font-bold text-center text-ticket-primary">P Paribahan </p>
+      <p class="text-xl mb-10 leading-none text-center lg:w-[600px] m-auto">P Paribahan: Your ultimate travel companion.
+        Experience seamless bus booking and travel services from start to finish. Book now for a hassle-free journey!
+      </p>
+      <a href="#"
+        class="bg-ticket-primary py-4 px-8 text-black font-bold text-xs rounded-md hover:bg-gray-200 mx-auto block w-[150px] text-center">Buy
+        Tickets</a>
 
- <h1 class="text-center text-4xl font-extrabold p-4">Best offers for you</h1>
+    </div>
 
- <div class="flex justify-center">
-    <div class="flex text-center bg-coupon15-color m-4 rounded-lg relative">
+    <!-- Coupon Code -->
+
+    <h1 class="text-center text-4xl font-extrabold p-4">Best offers for you</h1>
+
+    <div class="flex justify-center">
+      <div class="flex text-center bg-coupon15-color m-4 rounded-lg relative">
         <div class="flex flex-col text-center p-4">
-            <h1 class="font-extrabold text-3xl">15% OFF</h1>
-            <p>On your next purchase</p>
-            <p>Use by March 2024</p>
+          <h1 class="font-extrabold text-3xl">15% OFF</h1>
+          <p>On your next purchase</p>
+          <p>Use by March 2024</p>
         </div>
         <div class="border-dashed border-l-2 my-5 pt-5 ">
-            <div class="absolute rounded-full w-5 h-5 bg-white -ml-2 -top-2"></div>
-            <div class="absolute rounded-full w-5 h-5 bg-white -ml-2 -bottom-2"></div>
+          <div class="absolute rounded-full w-5 h-5 bg-white -ml-2 -top-2"></div>
+          <div class="absolute rounded-full w-5 h-5 bg-white -ml-2 -bottom-2"></div>
         </div>
         <div class="flex flex-col text-center p-4">
-            <h1 class="font-extrabold text-2xl">NEW15</h1>
-            <p>Coupon Code</p>
+          <h1 class="font-extrabold text-2xl">NEW15</h1>
+          <p>Coupon Code</p>
         </div>
-       
-        
-     </div>
-     <div class="flex text-center bg-coupon20-color m-4 rounded-lg relative">
+
+
+      </div>
+      <div class="flex text-center bg-coupon20-color m-4 rounded-lg relative">
         <div class="flex flex-col text-center p-4 ">
-            <h1 class="font-extrabold text-3xl">20% OFF</h1>
-            <p class="text-ticket-small-color text-">On your next purchase</p>
-            <p>Use by March 2024</p>
+          <h1 class="font-extrabold text-3xl">20% OFF</h1>
+          <p class="text-ticket-small-color text-">On your next purchase</p>
+          <p>Use by March 2024</p>
         </div>
         <div class="border-dashed border-l-2 my-5 pt-5 ">
-            <div class="absolute rounded-full w-5 h-5 bg-white -ml-2 -top-2"></div>
-            <div class="absolute rounded-full w-5 h-5 bg-white -ml-2 -bottom-2"></div>
+          <div class="absolute rounded-full w-5 h-5 bg-white -ml-2 -top-2"></div>
+          <div class="absolute rounded-full w-5 h-5 bg-white -ml-2 -bottom-2"></div>
         </div>
         <div class="flex flex-col text-center p-4">
-            <h1 class="font-extrabold text-2xl">Couple 20</h1>
-            <p>Coupon Code</p>
+          <h1 class="font-extrabold text-2xl">Couple 20</h1>
+          <p>Coupon Code</p>
         </div>
-     </div>
- </div>
-    </main> 
+      </div>
+    </div>
 
-    <footer>
+    <section>
+      <!-- Main section starts -->
+      <div class="flex flex-col justify-center items-center">
+        <h1 class="text-3xl font-extrabold text-center pb-2">P.H Paribahan</h1>
+        <p class="text-ticket-heading-color text-center font-semibold text-opacity-60 w-2/4 pb-5">P Paribahan: Seat
+          Selection & Ticket Purchase - Book your seats and buy tickets conveniently for your journey with us</p>
+      </div>
+      <section id="ticket-des" class="mx-10 flex justify-between relative">
 
-    </footer>
-    <script src="/Js/activities.js"></script>
+        <div class="w-3/4">
+          <div class="flex justify-between">
+            <div class="flex flex-row mb-2">
+              <div class="mr-3">
+                <img src="/images/bus-logo.png">
+              </div>
+              <div>
+                <h1 class="text-2xl font-bold">GreenLine Paribahan</h1>
+                <p class="text-ticket-heading-color font-semibold text-opacity-60">Coach-009-WEB ! AC_Business</p>
+              </div>
+            </div>
+  
+            <a class="btn bg-ticket-primary bg-opacity-20 text-ticket-primary block"> <img src="/images/seat-green.png"
+                alt=""><span>40</span>Seats left </a>
+          </div>
+  
+          <form class="p-4 bg-[#F7F8F8]">
+            <div class="flex justify-between">
+              <p class="text-ticket-heading-color font-semibold text-opacity-60">Route</p>
+              <p class="font-bold">Dhaka-sylhet</p>
+            </div>
+            <div class="border-b-2 border-dashed p-2 mb-2"></div>
+            
+            <div class="flex justify-between">
+              <p class="text-ticket-heading-color font-semibold text-opacity-60">Departure Time</p>
+              <p class="font-bold">9:00 PM</p>
+            </div>
+            <div class="border-b-2 border-dashed p-2 mb-2"></div>
+  
+            <div class="flex justify-evenly">
+              <button class="btn">Boarding Point - Laxmipur</button>
+              <button class="btn">Dropping Point - Bogura</button>
+              <button class="btn">Est. Time - 11 Hour</button>
+             </div>
+  
+          </form>
+        </div>
+
+       
+
+        <div class="flex flex-col justify-center items-center w-1/4">
+          <img src="/images/fare.png" alt="">
+          <h1 class="text-2xl font-bold">550 Taka</h1>
+          <p class="text-ticket-heading-color font-semibold text-opacity-60">Per Seat</p>
+        </div>
+
+      </section>
+    </section>
+  </main>
+
+  <footer>
+
+  </footer>
+  <script src="/Js/activities.js"></script>
 </body>
+
 </html>
