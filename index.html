@@ -89,7 +89,7 @@
       <p class="text-xl mb-10 leading-none text-center lg:w-[600px] m-auto">P Paribahan: Your ultimate travel companion.
         Experience seamless bus booking and travel services from start to finish. Book now for a hassle-free journey!
       </p>
-      <a href="#"
+      <a href="#book-ticket"
         class="bg-ticket-primary py-4 px-8 text-black font-bold text-xs rounded-md hover:bg-gray-200 mx-auto block w-[150px] text-center">Buy
         Tickets</a>
 
@@ -134,7 +134,7 @@
       </div>
     </div>
 
-    <section class="bg-[#F7F8F8] rounded-3xl border-t-2 border-ticket-primary">
+    <section id="book-ticket" class="bg-[#F7F8F8] rounded-3xl border-t-2 border-ticket-primary">
       <!-- Main section starts -->
       <div class="flex flex-col justify-center items-center">
         <h1 class="text-3xl font-extrabold text-center pb-2">P.H Paribahan</h1>
@@ -155,8 +155,8 @@
               </div>
             </div>
 
-            <a class="btn bg-ticket-primary bg-opacity-20 text-ticket-primary block"> <img src="/images/seat-green.png"
-                alt=""><span>40</span>Seats left </a>
+            <a class="btn bg-ticket-primary bg-opacity-20 text-ticket-primary  flex"> <img src="/images/seat-green.png"
+                alt=""><span id="ticket-remaining" class="px-1" >40</span>Seats left </a>
           </div>
 
           <form class="p-4 bg-[#F7F8F8] ">
@@ -364,7 +364,7 @@
               <p class="text-xl font-semibold">Class</p>
               <p class="text-xl font-semibold">Price</p>
             </div>
-            <div class="border-b-2 border-solid p-2 mb-2">
+            <div id="ticket-details-container" class="border-b-2 border-solid p-2 mb-2">
               <!-- C2 economy -->
             </div>
 
@@ -407,9 +407,8 @@
 
             <div class="flex justify-evenly">
               <p class="text-ticket-heading-color font-semibold text-opacity-60 underline">Terms and conditions</p>
-            <p class="text-ticket-heading-color font-semibold text-opacity-60 underline">Cancellation Policy</p>
+              <p class="text-ticket-heading-color font-semibold text-opacity-60 underline">Cancellation Policy</p>
             </div>
-            
           </div>
 
         </section>
@@ -431,6 +430,7 @@
   <footer>
 
   </footer>
+  <script src="/Js/utility.js"></script>
   <script src="/Js/activities.js"></script>
 </body>
 
