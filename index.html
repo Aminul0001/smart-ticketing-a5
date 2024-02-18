@@ -32,6 +32,8 @@
             'ticket-primary': '#1DD100',
             'ticket-heading-color': '#030712',
             'ticket-small-color': '#424247',
+            'coupon15-color': '#FFBF0F',
+            'coupon20-color': '#F78C9C',
             
           }
         }
@@ -41,7 +43,7 @@
 </head>
 <body class="raleway">
     <header>
-        <div class="navbar bg-base-100">
+        <div class="navbar px-10 bg-base-100">
             <div class="navbar-start">
               <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -68,11 +70,59 @@
               <a class="btn bg-ticket-primary bg-opacity-20">Bus <img src="/images/bus-icon.png" alt=""></a>
             </div>
           </div>
+          <!-- Navbar Complete -->
     </header>
 
-    <main>
+    <main class="container mx-auto">
+        <!-- Main banner -->
+<div class="bg-cover bg-center h-auto lg:h-[500px] text-white py-24  object-fill mx-10 rounded-lg  justify-center " style="background-image: url(/images/banner.png);">
+    
+     <p class="text-3xl font-bold text-center">End-to-End Travel with </p>
+     <p class="text-3xl font-bold text-center text-ticket-primary">P Paribahan </p>
+     <p class="text-xl mb-10 leading-none text-center lg:w-[600px] m-auto">P Paribahan: Your ultimate travel companion. Experience seamless bus booking and travel services from start to finish. Book now for a hassle-free journey!</p>
+     <a href="#" class="bg-ticket-primary py-4 px-8 text-black font-bold text-xs rounded-md hover:bg-gray-200 mx-auto block w-[150px] text-center">Buy Tickets</a>
+      
+ </div>
 
-    </main>
+ <!-- Coupon Code -->
+
+ <h1 class="text-center text-4xl font-extrabold p-4">Best offers for you</h1>
+
+ <div class="flex justify-center">
+    <div class="flex text-center bg-coupon15-color m-4 rounded-lg relative">
+        <div class="flex flex-col text-center p-4">
+            <h1 class="font-extrabold text-3xl">15% OFF</h1>
+            <p>On your next purchase</p>
+            <p>Use by March 2024</p>
+        </div>
+        <div class="border-dashed border-l-2 my-5 pt-5 ">
+            <div class="absolute rounded-full w-5 h-5 bg-white -ml-2 -top-2"></div>
+            <div class="absolute rounded-full w-5 h-5 bg-white -ml-2 -bottom-2"></div>
+        </div>
+        <div class="flex flex-col text-center p-4">
+            <h1 class="font-extrabold text-2xl">NEW15</h1>
+            <p>Coupon Code</p>
+        </div>
+       
+        
+     </div>
+     <div class="flex text-center bg-coupon20-color m-4 rounded-lg relative">
+        <div class="flex flex-col text-center p-4 ">
+            <h1 class="font-extrabold text-3xl">20% OFF</h1>
+            <p class="text-ticket-small-color text-">On your next purchase</p>
+            <p>Use by March 2024</p>
+        </div>
+        <div class="border-dashed border-l-2 my-5 pt-5 ">
+            <div class="absolute rounded-full w-5 h-5 bg-white -ml-2 -top-2"></div>
+            <div class="absolute rounded-full w-5 h-5 bg-white -ml-2 -bottom-2"></div>
+        </div>
+        <div class="flex flex-col text-center p-4">
+            <h1 class="font-extrabold text-2xl">Couple 20</h1>
+            <p>Coupon Code</p>
+        </div>
+     </div>
+ </div>
+    </main> 
 
     <footer>
 
