@@ -69,14 +69,30 @@ const allSeats = ['a1', 'a2', 'a3', 'a4', 'b1', 'b2', 'b3', 'b4', 'c1', 'c2', 'c
 setValueToTotalSection(allSeats);
 
 
-const totalPrice1 = document.getElementById('total-price')
-const totalPrice = parseInt(totalPrice1)
-const couponNew1 = "NEW15"
-const couponNew = couponNew1.toLocaleLowerCase
-const couponCouple1 = "Couple 20"
-const couponCouple = couponCouple1.toLocaleLowerCase
+const couponNew = "new15";
+const couponCouple = "couple 20";
 
-function couponApply(totalPrice){
+function couponApply() {
+    const totalPriceElement = document.getElementById('total-price');
+    const totalPrice = parseInt(totalPriceElement.innerText);
 
+    const code = document.getElementById('coupon-code').value.toLowerCase();
+    let discount = 0;
+
+    if (code === couponNew) {
+        discount = (totalPrice * 15) / 100;
+    } else if (code === couponCouple) {
+        discount = (totalPrice * 20) / 100;
+    }
+
+    const grandTotal = totalPrice - discount;
+
+    if (grandTotal < 0) {
+        totalPriceElement.innerText = '0';
+    } else {
+        totalPriceElement.innerText = grandTotal.toString();
+    }
+
+    document.getElementById('coupon-apply').removeAttribute('disabled',false);
 }
 
