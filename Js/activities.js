@@ -114,8 +114,3 @@ function couponApply(text) {
 }
 
 
-
-
-
-
-

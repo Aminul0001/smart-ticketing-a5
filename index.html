@@ -134,6 +134,10 @@
       </div>
     </div>
 
+    <div class="flex justify-center mb-3">
+      <button class="btn text-ticket-primary bg-white border border-ticket-primary">See All Offers</button>
+    </div>
+
     <section id="book-ticket" class="bg-[#F7F8F8] rounded-3xl border-t-2 border-ticket-primary">
       <!-- Main section starts -->
       <div class="flex flex-col justify-center items-center">
@@ -402,7 +406,35 @@
             </div>
 
             <div>
-              <button class="btn bg-ticket-primary w-full text-white mb-4">Next</button>
+              <button class="btn bg-ticket-primary w-full text-white mb-4" onclick="my_modal_4.showModal()" id="submitBtn" >Next</button>
+              <dialog id="my_modal_4" class="modal">
+                <div class="modal-box w-11/12 max-w-5xl">
+                    <div class="modal-action">
+                        <div>
+                            <div class="text-center mb-5">
+                                <img class="mx-auto" src="images/success.png" alt="" />
+                            </div>
+                            <h1 class="text-center font-semibold text-2xl mb-5">
+                                SUCCESS
+                            </h1>
+                            <p class="text-center font-semibold text-xl mb-2">
+                                Thank you for Booking Our Bus Seats. We are working
+                                hard to find the best service and deals for you.
+                            </p>
+                            <p class="text-center text-xl font-normal">
+                                Shortly you will find a confirmation in your email.
+                            </p>
+                            <form method="dialog" class="text-center">
+                                
+                                <button
+                                    class="btn bg-green-500 mt-10 px-16 rounded-full font-semibold text-lg text-fuchsia-50">
+                                    Continue
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </dialog>
             </div>
 
             <div class="flex justify-evenly">
