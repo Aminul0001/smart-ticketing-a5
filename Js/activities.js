@@ -87,9 +87,6 @@ document.getElementById('coupon-container').addEventListener('keyup', function(e
 
 
 
-
-
-
 document.getElementById('coupon-apply-button').addEventListener('click', function() {
     const couponCode = document.getElementById('coupon-container').value;
     couponApply(couponCode);
@@ -112,9 +109,8 @@ function couponApply(text) {
         return; 
     }
 
-    console.log("Grand Total after discount:", grandTotal); // Debugging output
 
-    gtotal.innerText = grandTotal.toFixed(2); // Update the grand total with two decimal places
+    gtotal.innerText = grandTotal.toFixed(2); 
 }
 
 
