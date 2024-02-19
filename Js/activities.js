@@ -36,12 +36,15 @@ function setValueToTotalSection(buttonIDs) {
                     ticketCount.innerText = updateTicketCount
 
                     let totalPrice = document.getElementById('total-price');
+                    let grandTotal = document.getElementById('grand-total');
 
                     if (updateTicketCount >= 1 && updateTicketCount <= 4) {
                         const tprice = updateTicketCount * 550;
                         totalPrice.innerText = tprice.toString();
+                        grandTotal.innerText = tprice.toString();
                     } else {
                         totalPrice.innerText = '0';
+                        grandTotal.innerText = '0';
                     }
 
 
@@ -69,30 +72,54 @@ const allSeats = ['a1', 'a2', 'a3', 'a4', 'b1', 'b2', 'b3', 'b4', 'c1', 'c2', 'c
 setValueToTotalSection(allSeats);
 
 
-const couponNew = "new15";
-const couponCouple = "couple 20";
 
-function couponApply() {
-    const totalPriceElement = document.getElementById('total-price');
-    const totalPrice = parseInt(totalPriceElement.innerText);
+document.getElementById('coupon-container').addEventListener('keyup', function(event){
+    const text = event.target.value.toLowerCase();
 
-    const code = document.getElementById('coupon-code').value.toLowerCase();
-    let discount = 0;
-
-    if (code === couponNew) {
-        discount = (totalPrice * 15) / 100;
-    } else if (code === couponCouple) {
-        discount = (totalPrice * 20) / 100;
+    if (text === 'new15' || text === 'couple 20' ){
+        document.getElementById('coupon-apply-button').removeAttribute('disabled')
     }
+    
+    else {
+        document.getElementById('coupon-apply-button').setAttribute('disabled', true)
+    }
+})
 
-    const grandTotal = totalPrice - discount;
 
-    if (grandTotal < 0) {
-        totalPriceElement.innerText = '0';
+
+
+
+
+document.getElementById('coupon-apply-button').addEventListener('click', function() {
+    const couponCode = document.getElementById('coupon-container').value;
+    couponApply(couponCode);
+});
+
+function couponApply(text) {
+    let gtotal = document.getElementById('grand-total');
+    let totalPrice = parseInt(gtotal.innerText);
+    
+    let grandTotal; 
+    
+    text = text.toLowerCase(); 
+    
+    if (text === "new15") { 
+        grandTotal = totalPrice - (totalPrice * 0.15); 
+    } else if (text === "couple 20") { 
+        grandTotal = totalPrice - (totalPrice * 0.20); 
     } else {
-        totalPriceElement.innerText = grandTotal.toString();
+        
+        return; 
     }
 
-    document.getElementById('coupon-apply').removeAttribute('disabled',false);
+    console.log("Grand Total after discount:", grandTotal); // Debugging output
+
+    gtotal.innerText = grandTotal.toFixed(2); // Update the grand total with two decimal places
 }
+
+
+
+
+
+
 
